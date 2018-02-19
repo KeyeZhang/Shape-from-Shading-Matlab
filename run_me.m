@@ -3,7 +3,7 @@
 
 % path to the folder and subfolder
 root_path = '/Users/vincent.k.z/Documents/CS543/assignment1_materials/croppedyale/';
-subject_name = 'yaleB01';
+subject_name = 'yaleB02';
 
 integration_method = 'average'; % 'column', 'row', 'average', 'random'
 
@@ -32,7 +32,7 @@ imarray = subtract_imarray./255
 
 %% get albedo and surface normals (you need to fill in photometric_stereo)
 [albedo_image, surface_normals] = photometric_stereo(imarray, light_dirs);
-imshow(albedo_image)
+
 
 %% reconstruct height map (you need to fill in get_surface for different integration methods)
 height_map = get_surface(surface_normals, image_size, integration_method);

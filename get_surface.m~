@@ -26,17 +26,11 @@ function  height_map = get_surface(surface_normals, image_size, method)
                         for breaky1 = 1:j
                             for breaky2 = breaky1: j
                                 sumx1 = cumsum(cumsumx(breaky1, 1:breakx))
-                                sumx2 = cumsum(cumsumx(breaky2, breakx:i))
-                                sumy1 = cumsum(cumsumy(1: breaky1, 1))
-                                sumy2 = cumsum(cumsumy(breaky1: breaky2, breakx))
+                                sumx2 = cumsum(cumsumx(breaky2, breakx:i)
+                                sumy1 = cumsum(cumsumy(1: breaky1), 1)
+                                sumy2 = cumsum(cumsumy(breaky1: breaky2, breakx)
                                 sumy3 = cumsum(cumsumy(breaky2: j, i))
                                 height_map(i,j) = sumx1(end)+sumx2(end)+sumy1(end)+sumy2(end)+sumy3(end)
-                            end
-                        end
-                    end
-                end
-            end
-            
                             
                         
                     
